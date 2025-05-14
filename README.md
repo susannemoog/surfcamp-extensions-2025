@@ -2,7 +2,7 @@
 
 This project will combine all projects created during the TYPO3 SurfCamp 2025
 
-> ![NOTE]
+> [!NOTE]
 > This is currently in a experimental state!
 > Once the extensions are extracted from the project repository
 > into a dedicated repository for the extension only it can and
