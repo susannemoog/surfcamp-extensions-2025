@@ -4,6 +4,7 @@
 /public/fileadmin/_processed_
 /public/fileadmin/user_upload
 !/public/fileadmin
+!/public/.htaccess
 /var/
 /vendor/
 /typo3_core/
