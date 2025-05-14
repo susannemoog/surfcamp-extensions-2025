@@ -18,6 +18,10 @@
         "packages": {
             "type": "path",
             "url": "packages/*"
+        },
+        "memsy": {
+            "type": "vcs",
+             "url": "https://github.com/TYPO3incubator/ext-memsy.git"
         }
     },
     "config": {
@@ -37,6 +41,7 @@
     "require": {
         "php": ">=8.3.0",
         "bk2k/bootstrap-package": "^15.0",
+        "typo3-incubator/memsy": "@dev",
         "typo3-incubator/surfcamp-base": "dev-main",
         "typo3-incubator/theme-fcbigfoot": "^0.0.1",
         "typo3/cms-backend": "^13.4",

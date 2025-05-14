@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ba172d98db915cc46f35d0d70ad87f9c",
+    "content-hash": "cd209a2e92f3749232ad1c0de89d2725",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -277,6 +277,62 @@
                 "source": "https://github.com/DASPRiD/Enum/tree/1.0.6"
             },
             "time": "2024-08-09T14:30:48+00:00"
+        },
+        {
+            "name": "digitick/sepa-xml",
+            "version": "2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-sepa-xml/php-sepa-xml.git",
+                "reference": "3a0108d6003cde8e62c6d94e86b908096a97d7ac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-sepa-xml/php-sepa-xml/zipball/3a0108d6003cde8e62c6d94e86b908096a97d7ac",
+                "reference": "3a0108d6003cde8e62c6d94e86b908096a97d7ac",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.0 | ^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Digitick\\Sepa\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Ianaré Sévi"
+                },
+                {
+                    "name": "Digitick, SA",
+                    "email": "info@digitick.net"
+                },
+                {
+                    "name": "Sören Rohweder (monofone)",
+                    "email": "s.rohweder@blage.net"
+                }
+            ],
+            "description": "Creates Single Euro Payments Area (SEPA) XML files for the Direct Debit and Credit Transfer operations.",
+            "keywords": [
+                "Banking",
+                "sepa",
+                "xml"
+            ],
+            "support": {
+                "issues": "https://github.com/php-sepa-xml/php-sepa-xml/issues",
+                "source": "https://github.com/php-sepa-xml/php-sepa-xml/tree/2.2.1"
+            },
+            "time": "2024-05-16T09:58:03+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -920,6 +976,41 @@
                 "source": "https://github.com/firebase/php-jwt/tree/v6.11.1"
             },
             "time": "2025-04-09T20:32:01+00:00"
+        },
+        {
+            "name": "globalcitizen/php-iban",
+            "version": "v4.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/globalcitizen/php-iban.git",
+                "reference": "d8d2b7c60ba01286fc625763618760aa3b684c00"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/globalcitizen/php-iban/zipball/d8d2b7c60ba01286fc625763618760aa3b684c00",
+                "reference": "d8d2b7c60ba01286fc625763618760aa3b684c00",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4 || ^5.5 || ^5.6 || ^7.0 || ^7.4 || ^8.0 || ^8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "oophp-iban.php",
+                    "php-iban.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0-only"
+            ],
+            "description": "php-iban is a library for parsing and validating IBAN (and IIBAN) bank account information.",
+            "support": {
+                "issues": "https://github.com/globalcitizen/php-iban/issues",
+                "source": "https://github.com/globalcitizen/php-iban/tree/v4.2.3"
+            },
+            "time": "2024-03-25T00:37:02+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -5083,6 +5174,66 @@
             "time": "2025-03-03T07:12:39+00:00"
         },
         {
+            "name": "typo3-incubator/memsy",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3incubator/ext-memsy.git",
+                "reference": "41f2e17e74c30491502da6e198b61643932062c5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3incubator/ext-memsy/zipball/41f2e17e74c30491502da6e198b61643932062c5",
+                "reference": "41f2e17e74c30491502da6e198b61643932062c5",
+                "shasum": ""
+            },
+            "require": {
+                "digitick/sepa-xml": "^2.2",
+                "globalcitizen/php-iban": "^4.2",
+                "psr/http-message": "^1.0 || ^2.0",
+                "psr/log": "^3.0",
+                "symfony/console": "^7.0",
+                "symfony/mailer": "^7.0",
+                "symfony/mime": "^7.0",
+                "symfony/polyfill-php83": "^1.31",
+                "typo3/cms-backend": "^13.4",
+                "typo3/cms-core": "^13.4",
+                "typo3/cms-extbase": "^13.4",
+                "typo3/cms-frontend": "^13.4",
+                "typo3/cms-install": "^13.4",
+                "typo3fluid/fluid": "^4.1"
+            },
+            "require-dev": {
+                "typo3/cms-felogin": "^13.4",
+                "typo3/cms-scheduler": "^13.4"
+            },
+            "suggest": {
+                "typo3/cms-felogin": "Can be used to authenticate to an internal member area (^13.4)",
+                "typo3/cms-scheduler": "Can be used to perform garbage collection of deregistered members (^13.4)"
+            },
+            "default-branch": true,
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "memsy"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TYPO3Incubator\\Memsy\\": "Classes/"
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Member management extension for TYPO3 CMS",
+            "support": {
+                "source": "https://github.com/TYPO3incubator/ext-memsy/tree/main",
+                "issues": "https://github.com/TYPO3incubator/ext-memsy/issues"
+            },
+            "time": "2025-05-14T15:20:23+00:00"
+        },
+        {
             "name": "typo3-incubator/surfcamp-base",
             "version": "dev-main",
             "dist": {
@@ -7090,6 +7241,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "typo3-incubator/memsy": 20,
         "typo3-incubator/surfcamp-base": 20
     },
     "prefer-stable": true,
