@@ -1,4 +1,4 @@
-base: '%env(SITE_BASE)%'
+base: '/base'
 dependencies:
   - typo3-incubator/surfcamp-base
 languages:

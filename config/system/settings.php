@@ -1,10 +1,10 @@
 <?php
 return [
     'BE' => [
-        'debug' => true,
-        'installToolPassword' => '<set in dotenv>',
+        'debug' => false,
+        'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=1$TEJyTVRNTG5lYk40R2tCMQ$rH0Bs1SxPhCvcwe7b6pfjhbwJgARJqpynCc6/XClz+Y',
         'passwordHashing' => [
-            'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2idPasswordHash',
+            'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
             'options' => [],
         ],
     ],
@@ -12,16 +12,16 @@ return [
         'Connections' => [
             'Default' => [
                 'charset' => 'utf8mb4',
-                'dbname' => '<set in dotenv>',
-                'driver' => 'mysqli',
-                'host' => '<set in dotenv>',
-                'password' => '<set in dotenv>',
-                'port' => '<set in dotenv>',
-                'tableoptions' => [
+                'dbname' => 'db',
+                'defaultTableOptions' => [
                     'charset' => 'utf8mb4',
-                    'collate' => 'utf8mb4_unicode_ci',
+                    'collation' => 'utf8mb4_unicode_ci',
                 ],
-                'user' => '<set in dotenv>',
+                'driver' => 'mysqli',
+                'host' => 'db',
+                'password' => 'db',
+                'port' => 3306,
+                'user' => 'db',
             ],
         ],
     ],
@@ -38,12 +38,12 @@ return [
         'bootstrap_package' => [
             'disableCssProcessing' => '0',
             'disableGoogleFontCaching' => '0',
-            'disablePageTsBackendLayouts' => '1',
-            'disablePageTsContentElements' => '1',
-            'disablePageTsRTE' => '1',
-            'disablePageTsTCADefaults' => '1',
-            'disablePageTsTCEFORM' => '1',
-            'disablePageTsTCEMAIN' => '1',
+            'disablePageTsBackendLayouts' => '0',
+            'disablePageTsContentElements' => '0',
+            'disablePageTsRTE' => '0',
+            'disablePageTsTCADefaults' => '0',
+            'disablePageTsTCEFORM' => '0',
+            'disablePageTsTCEMAIN' => '0',
         ],
         'extensionmanager' => [
             'automaticInstallation' => '1',
@@ -75,18 +75,12 @@ return [
         'cacheHash' => [
             'enforceValidation' => true,
         ],
-        'debug' => true,
+        'debug' => false,
         'disableNoCacheParameter' => true,
         'passwordHashing' => [
-            'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2idPasswordHash',
+            'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
             'options' => [],
         ],
-    ],
-    'GFX' => [
-        'processor' => 'GraphicsMagick',
-        'processor_effects' => false,
-        'processor_enabled' => true,
-        'processor_path' => '/usr/bin/',
     ],
     'LOG' => [
         'TYPO3' => [
@@ -95,7 +89,7 @@ return [
                     'writerConfiguration' => [
                         'notice' => [
                             'TYPO3\CMS\Core\Log\Writer\FileWriter' => [
-                                'disabled' => false,
+                                'disabled' => true,
                             ],
                         ],
                     ],
@@ -105,7 +99,7 @@ return [
     ],
     'MAIL' => [
         'transport' => 'sendmail',
-        'transport_sendmail_command' => '/usr/local/bin/mailpit sendmail -t --smtp-addr 127.0.0.1:1025',
+        'transport_sendmail_command' => '/usr/sbin/sendmail -t -i',
         'transport_smtp_encrypt' => '',
         'transport_smtp_password' => '',
         'transport_smtp_server' => '',
@@ -132,14 +126,16 @@ return [
                 ],
             ],
         ],
-        'devIPmask' => '*',
-        'displayErrors' => 1,
-        'encryptionKey' => '<set in dotenv>',
-        'exceptionalErrors' => 12290,
-        'sitename' => 'Surfcamp Template',
+        'devIPmask' => '',
+        'displayErrors' => 0,
+        'encryptionKey' => '832bb00fc244793d00d3398c938dfaaa169580c24d02a0717850e3a3865b925c49e167c61ba2c8e8a3cbc43f3fdcabb2',
+        'exceptionalErrors' => 4096,
+        'features' => [
+            'frontend.cache.autoTagging' => true,
+        ],
+        'sitename' => 'TYPO3 SurfCamp 2025',
         'systemMaintainers' => [
             1,
         ],
-        'trustedHostsPattern' => '.*',
     ],
 ];

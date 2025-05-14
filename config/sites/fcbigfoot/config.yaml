@@ -1,4 +1,4 @@
-base: '%env(SITE_FCBIGFOOT_BASE)%'
+base: '/'
 dependencies:
   - typo3-incubator/theme-fcbigfoot
 languages:

@@ -1,5 +1,9 @@
 /bin/
-/public/
+/public/*
+/public/fileadmin/_temp_
+/public/fileadmin/_processed_
+/public/fileadmin/user_upload
+!/public/fileadmin
 /var/
 /vendor/
 /typo3_core/

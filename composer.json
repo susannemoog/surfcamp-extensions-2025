@@ -62,7 +62,6 @@
         "typo3/cms-scheduler": "^13.4",
         "typo3/cms-seo": "^13.4",
         "typo3/cms-setup": "^13.4",
-        "typo3/cms-tstemplate": "^13.4",
-        "vlucas/phpdotenv": "^5.6"
+        "typo3/cms-tstemplate": "^13.4"
     }
 }
