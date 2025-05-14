@@ -5,8 +5,8 @@ This project will combine all projects created during the TYPO3 SurfCamp 2025
 > [!NOTE]
 > This is currently in a experimental state!
 > Once the extensions are extracted from the project repository
-> into a dedicated repository for the extension only it can and
-> hopefully will be installed and configures
+> into a dedicated repository for the extension it can and
+> hopefully will be installed and configured
 >
 
 ## Extensions
