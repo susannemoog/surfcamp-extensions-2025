@@ -1,40 +1,35 @@
-# TYPO3 Surfcamp Base 2025
+# TYPO3 Surfcamp Extension 2025
 
-This Git repository is intended for use by our dedicated teams at the [TYPO3 Surfcamp](https://surfcamp.typo3.com/).
+This project will combine all projects created during the TYPO3 SurfCamp 2025
 
-The project is based on TYPO3 v13, using Composer. The configuration happens via `.env` thanks to the underlying package `vlucas/phpdotenv`.
+> ![NOTE]
+> This is currently in a experimental state!
+> Once the extensions are extracted from the project repository
+> into a dedicated repository for the extension only it can and
+> hopefully will be installed and configures
+>
 
-## Requirements
+## Extensions
 
-* having Docker installed locally (see https://docs.docker.com/get-docker/)
-* having DDEV installed locally (see https://ddev.readthedocs.io/en/stable/#installation)
+Installed
 
-## Initialization
+* MemSy: https://github.com/TYPO3incubator/ext-memsy/
 
-```sh
-ddev start
-ddev composer install
-ddev pull assets
-```
+Wating for a dedicated repository
+
+* Restaurant: https://github.com/TYPO3incubator/surfcamp-2025-team1/tree/develop/packages
+* Shopping Cart: https://github.com/TYPO3incubator/surfcamp-2025-team2/
+* API aggregation: https://github.com/TYPO3incubator/surfcamp-2025-team3/tree/main/packages/surfcamp-base
+* Servey: https://github.com/TYPO3incubator/surfcamp-2025-team4/
+* Events: https://github.com/TYPO3incubator/surfcamp-2025-team6
 
 ## Credentials
 
-- Backend: https://surfcamp-base-2025.ddev.site/typo3
+- Backend: <code-space-url or see PORTS in terminal>/typo3
 - Username: `admin`
 - Password: `John3:16`
 
-### Downloading database and files
+## Local requirements
 
-```sh
-# HEADS UP: All files in the local `public/fileadmin/` will be overridden, that means:
-# all files that are not present in `data/files/public/fileadmin/` will be deleted from fileadmin
-ddev pull assets
-```
-
-### Update local database and files
-
-```sh
-# HEADS UP: All files in the local `data/files/public/fileadmin/` will be overridden, that means:
-# all files that are not present in `public/fileadmin/` will be deleted from fileadmin
-ddev push assets
-```
+* having Docker installed locally (see https://docs.docker.com/get-docker/)
+* VS Code with the devcontainer extension enabled (see https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
