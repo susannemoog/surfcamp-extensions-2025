@@ -10,8 +10,9 @@ sudo rm /usr/local/etc/php/conf.d/xdebug.ini
 mysql -u db -h db -pdb db < data/db/db.sql
 sudo a2enmod rewrite
 sudo chmod a+x "$(pwd)" 
-sudo rm -rf /var/www/html
-sudo ln -sfn /workspace/public /var/www/html
 
 composer install
-./bin/typo3 extension:setup
+
+# Symlink DocumentRoot
+sudo rm -rf /var/www/html
+sudo ln -sfn /workspace/public /var/www/html
