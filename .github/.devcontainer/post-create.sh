@@ -2,7 +2,8 @@
 
 sudo apt update
 sudo apt install libicu-dev mariadb-client -y
-sudo -E docker-php-ext-install intl mysqli
+sudo -E docker-php-ext-install intl
+sudo -E docker-php-ext-install mysqli
 
 # xDebug is currently not working, removing the config avoids spamming
 # the terminal for now.

@@ -1,6 +1,6 @@
 services:
   typo3:
-    image: mcr.microsoft.com/devcontainers/php:8.4
+    image: ghcr.io/ochorocho/surfcamp-extensions-2025:latest
     volumes:
       - ..:/workspace:cached
     command: sleep infinity
