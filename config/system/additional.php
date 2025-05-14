@@ -2,12 +2,12 @@
 
 $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'], [
     'BE' => [
-        'debug' => $_ENV['TYPO3_BE_DEBUG'] ?? 0,
-        'installToolPassword' => $_ENV['TYPO3_BE_INSTALLTOOLPASSWORD'] ?? '',
+        'debug' => 0,
+        'installToolPassword' => '$argon2id$v=19$m=65536,t=16,p=1$VktrT0J2cXU3SHNtY0c4SA$36zwyPIHD9iUteTlw04ft6NYYmhVA9FtzkR5py/5B0w',
         'entryPoint' => 'typo3/',
     ],
     'FE' => [
-        'debug' => $_ENV['TYPO3_FE_DEBUG'] ?? 0,
+        'debug' => 0,
     ],
     'DB' => [
         'Connections' => [
@@ -21,15 +21,7 @@ $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'
         ],
     ],
     'MAIL' => [
-        // 'defaultMailFromAddress' => $_ENV['TYPO3_MAIL_DEFAULTMAILFROMADDRESS'] ?? '',
-        // 'defaultMailFromName' => $_ENV['TYPO3_MAIL_DEFAULTMAILFROMNAME'] ?? '',
-        // 'transport' => $_ENV['TYPO3_MAIL_TRANSPORT'],
-        // 'transport_mbox_file' => $_ENV['TYPO3_MAIL_TRANSPORT_MBOX_FILE'],
-        // 'transport_sendmail_command' => $_ENV['TYPO3_MAIL_TRANSPORT_SENDMAIL_COMMAND'],
-        // 'transport_smtp_encrypt' => $_ENV['TYPO3_MAIL_TRANSPORT_SMTP_ENCRYPT'],
-        // 'transport_smtp_password' => $_ENV['TYPO3_MAIL_TRANSPORT_SMTP_PASSWORD'],
-        // 'transport_smtp_server' => $_ENV['TYPO3_MAIL_TRANSPORT_SMTP_SERVER'],
-        // 'transport_smtp_username' => $_ENV['TYPO3_MAIL_TRANSPORT_SMTP_USERNAME'],
+        // @todo: Enable mailpit
     ],
     'SYS' => [
         'devIPmask' => '',
