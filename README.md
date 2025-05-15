@@ -9,6 +9,12 @@ This project will combine all projects created during the TYPO3 SurfCamp 2025
 > hopefully will be installed and configured
 >
 
+## Credentials
+
+- Backend: <code-space-url or see PORTS in terminal>/typo3
+- Username: `admin`
+- Password: `John3:16`
+
 ## Extensions
 
 Installed
@@ -22,12 +28,6 @@ Wating for a dedicated repository
 * API aggregation: https://github.com/TYPO3incubator/surfcamp-2025-team3/tree/main/packages/surfcamp-base
 * Servey: https://github.com/TYPO3incubator/surfcamp-2025-team4/
 * Events: https://github.com/TYPO3incubator/surfcamp-2025-team6
-
-## Credentials
-
-- Backend: <code-space-url or see PORTS in terminal>/typo3
-- Username: `admin`
-- Password: `John3:16`
 
 ## Local requirements
 
