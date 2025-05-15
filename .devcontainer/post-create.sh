@@ -23,6 +23,7 @@ fi
 
 sudo a2enmod rewrite
 sudo chmod a+x "$(pwd)" 
+composer install
 
 # Symlink DocumentRoot
 sudo rm -rf /var/www/html
