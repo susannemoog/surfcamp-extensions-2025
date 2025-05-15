@@ -11,9 +11,3 @@ sudo rm /usr/local/etc/php/conf.d/xdebug.ini
 mysql -u db -h db -pdb db < data/db/db.sql
 sudo a2enmod rewrite
 sudo chmod a+x "$(pwd)" 
-
-composer install
-
-# Symlink DocumentRoot
-sudo rm -rf /var/www/html
-sudo ln -sfn /workspace/public /var/www/html
