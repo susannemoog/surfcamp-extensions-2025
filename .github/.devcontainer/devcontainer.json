@@ -1,7 +1,8 @@
 {
 	"name": "TYPO3 SurfCamp 2025",
-	"dockerComposeFile": "docker-compose.yml",
-	"service": "typo3",
+	// "dockerComposeFile": "docker-compose.yml",
+	// "service": "typo3",
+	"build": { "dockerfile": "Dockerfile" },
 	"workspaceFolder": "/workspace",
 	"customizations": {
 		"vscode": {
@@ -10,7 +11,5 @@
 			]
 		}
 	},
-	"remoteUser": "vscode",
-	"postCreateCommand": "bash .devcontainer/post-create.sh",
-	"postStartCommand": "./bin/typo3 extension:setup && apachectl start"
-} 
+	"remoteUser": "vscode"
+}
