@@ -1,14 +1,26 @@
 #!/usr/bin/bash
 
-# sudo apt update
-# sudo apt install libicu-dev mariadb-client -y
-# sudo -E docker-php-ext-install intl
-# sudo -E docker-php-ext-install mysqli
+# @todo: only run import when database is empty
+# Database credentials
+USER="db"
+PASSWORD="db"
+HOST="db"
+DB="db"
 
-# xDebug is currently not working, removing the config avoids spamming
-# the terminal for now.
-sudo rm /usr/local/etc/php/conf.d/xdebug.ini
-mysql -u db -h db -pdb db < data/db/db.sql
+echo "Waiting for MySQL to be ready..."
+until mysqladmin ping -h"$HOST" -u"$USER" -p"$PASSWORD" --silent; do
+  sleep 2
+done
+
+# Try only to import database in case it is empty
+TABLE_COUNT=$(mysql -u"$USER" -h"$HOST" -p"$PASSWORD" -N -s -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = '$DB';")
+if [ "$TABLE_COUNT" -eq 0 ]; then
+  echo "Importing database '$DB'"
+  mysql -u"$USER" -h"$HOST" -p"$PASSWORD" "$DB" < data/db/db.sql
+else
+  echo "Skipping import. The database is not empty."
+fi
+
 sudo a2enmod rewrite
 sudo chmod a+x "$(pwd)" 
 

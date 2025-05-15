@@ -10,6 +10,8 @@
 			]
 		}
 	},
+	// @todo: Update the image, because pushing "latest" 
+	// only will not update when the container is created
 	"remoteUser": "vscode",
 	"postCreateCommand": "bash .devcontainer/post-create.sh",
 	"postStartCommand": "./bin/typo3 extension:setup && apachectl start"
