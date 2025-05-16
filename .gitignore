@@ -10,9 +10,7 @@
 /typo3_core/
 *.idea
 *.project
-.vscode/launch.json
-!/.vscode/tasks.js
-!/.vscode/settings.js
+
 .env
 .DS_Store
 .history
