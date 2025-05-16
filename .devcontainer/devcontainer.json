@@ -14,6 +14,7 @@
 	// only will not update when the container is created
 	// @todo: xdebug
 	"remoteUser": "vscode",
+	"initializeCommand": "docker pull ghcr.io/ochorocho/surfcamp-extensions-2025:latest",
 	"postStartCommand": "bash .devcontainer/post-start.sh && ./bin/typo3 extension:setup && apachectl start",
 	"waitFor": "updateContentCommand"
 }
