@@ -6,15 +6,31 @@
         {
             "label": "Database",
             "type": "shell",
-            "command": "mysql -u db -h db -pdb db",
+            // Run only within the devcontainer
+            "command": "[ -d ~/.vscode-server ] && mysql -u db -h db -pdb db || exit 0",
             "presentation": {
-                "group": "buildGroup",
+                "group": "database",
                 "reveal": "never",
                 "panel": "new",
                 "echo": false,
             },
             "runOptions": {
                 "runOn": "folderOpen" // This starts both tasks when the container is started
+            }
+        },
+        {
+            "label": "Setup",
+            "type": "shell",
+            "command": "bash .devcontainer/install-vs-code-extensions.sh",
+            "presentation": {
+                "group": "setup",
+                "reveal": "never",
+                "panel": "new",
+                "close": true,
+                "echo": false,
+            },
+            "runOptions": {
+                "runOn": "folderOpen"
             }
         }
     ]

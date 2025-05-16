@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "mtxr.sqltools",
+        "xdebug.php-pack",
+        "EditorConfig.EditorConfig",
+        "mtxr.sqltools-driver-mysql"
+    ]
+}

@@ -1,6 +1,5 @@
 #!/usr/bin/bash
 
-# @todo: only run import when database is empty
 # Database credentials
 USER="db"
 PASSWORD="db"
@@ -22,7 +21,7 @@ else
 fi
 
 sudo a2enmod rewrite
-sudo chmod a+x "$(pwd)" 
+sudo chmod a+x "$(pwd)"
 composer install
 
 # Symlink DocumentRoot
