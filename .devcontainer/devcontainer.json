@@ -14,7 +14,6 @@
 	// only will not update when the container is created
 	// @todo: xdebug
 	"remoteUser": "vscode",
-	"postAttachCommand": "bash .devcontainer/post-attach.sh",
-	"postStartCommand": "./bin/typo3 extension:setup && apachectl start",
+	"postStartCommand": "bash .devcontainer/post-start.sh && ./bin/typo3 extension:setup && apachectl start",
 	"waitFor": "updateContentCommand"
 }
