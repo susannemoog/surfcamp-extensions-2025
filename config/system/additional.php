@@ -1,5 +1,8 @@
 <?php
 
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['reverseProxyIP'] = '*';
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['reverseProxyHeaderMultiValue'] = 'first';
+
 $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'], [
     'BE' => [
         'debug' => 0,
@@ -28,5 +31,7 @@ $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'
         'displayErrors' => 1,
         'encryptionKey' => 'c26bc4ffae86d01188fe2ff0e9b5061cf81f612d3acdb41a261e035862d0510d4eea24dbce58d7041f7b6aa090346d41',
         'exceptionalErrors' => 4096,
+        'reverseProxyIP' => '*',
+        'reverseProxyHeaderMultiValue' => 'first'
     ],
 ]);
