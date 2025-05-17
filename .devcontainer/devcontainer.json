@@ -10,11 +10,12 @@
 			]
 		}
 	},
-	// @todo: Update the image, because pushing "latest"
-	// only will not update when the container is created
-	// @todo: xdebug
+	"features": {
+    	"ghcr.io/skriptfabrik/devcontainer-features/mailpit:1": {}
+	},
 	"remoteUser": "vscode",
 	"initializeCommand": "docker pull ghcr.io/ochorocho/surfcamp-extensions-2025:latest",
 	"postStartCommand": "bash .devcontainer/post-start.sh && ./bin/typo3 extension:setup && apachectl start",
-	"waitFor": "updateContentCommand"
+	"waitFor": "updateContentCommand",
+	"forwardPorts": [8025]
 }

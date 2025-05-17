@@ -11,5 +11,8 @@
 			]
 		}
 	},
-	"remoteUser": "vscode"
+	"remoteUser": "vscode",
+	"features": {
+    	"ghcr.io/skriptfabrik/devcontainer-features/mailpit:1": {}
+	}
 }

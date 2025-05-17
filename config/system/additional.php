@@ -24,7 +24,7 @@ $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'
     'MAIL' => [
         'transport' => 'smtp',
         'transport_smtp_encrypt' => false,
-        'transport_smtp_server' => 'mail:1025',
+        'transport_smtp_server' => '127.0.0.1:1025',
         'defaultMailFromAddress' => 'info@example.com'
     ],
     'SYS' => [

@@ -15,25 +15,8 @@ services:
       MYSQL_DATABASE: db
       MYSQL_USER: db
       MYSQL_PASSWORD: db
-    ports:
-      - "3306:3306"
     volumes:
       - surfcamp-mariadb-data:/var/lib/mysql
-  mail:
-    image: axllent/mailpit
-    container_name: mailpit
-    restart: unless-stopped
-    volumes:
-      - surfcamp-mailpit-data:/data
-    ports:
-      - 8066:8025
-      - 1066:1025
-    environment:
-      MP_MAX_MESSAGES: 5000
-      MP_DATABASE: /data/mailpit.db
-      MP_SMTP_AUTH_ACCEPT_ANY: 1
-      MP_SMTP_AUTH_ALLOW_INSECURE: 1
 
 volumes:
   surfcamp-mariadb-data:
-  surfcamp-mailpit-data:
