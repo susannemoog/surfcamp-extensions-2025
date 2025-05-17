@@ -1,8 +1,17 @@
 FROM mcr.microsoft.com/devcontainers/php:8.4
 RUN sudo apt update && \
-    sudo apt install -y libicu-dev mariadb-client && \
+    sudo apt install -y libicu-dev mariadb-client mariadb-server && \
     sudo -E docker-php-ext-install intl mysqli && \
     sudo a2enmod rewrite && \
+    # Prepare database
+    service mariadb start && \
+    sudo mysql -e "CREATE DATABASE db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;" && \
+    sudo mysql -e "CREATE USER 'db'@'localhost' IDENTIFIED BY 'db';" && \
+    sudo mysql -e "CREATE USER 'db'@'127.0.0.1' IDENTIFIED BY 'db';" && \
+    sudo mysql -e "GRANT ALL PRIVILEGES ON db.* TO 'db'@'localhost';" && \
+    sudo mysql -e "GRANT ALL PRIVILEGES ON db.* TO 'db'@'127.0.0.1';" && \
+    sudo mysql -e "FLUSH PRIVILEGES;" && \
+    service mariadb stop && \
     cat <<EOF | sudo tee -a /usr/local/etc/php/conf.d/xdebug.ini
 xdebug.client_host = 0.0.0.0
 xdebug.log="/var/log/apache2/xdebug.log"

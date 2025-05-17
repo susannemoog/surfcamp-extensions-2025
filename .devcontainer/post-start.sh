@@ -3,7 +3,7 @@
 # Database credentials
 USER="db"
 PASSWORD="db"
-HOST="db"
+HOST="127.0.0.1"
 DB="db"
 
 echo "Waiting for MySQL to be ready..."

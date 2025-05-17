@@ -3,20 +3,8 @@ services:
     image: ghcr.io/ochorocho/surfcamp-extensions-2025:latest
     volumes:
       - ..:/workspace:cached
-    command: sleep infinity
-    depends_on:
-      - db
-
-  db:
-    image: mariadb:10.11
-    restart: unless-stopped
-    environment:
-      MYSQL_ROOT_PASSWORD: db
-      MYSQL_DATABASE: db
-      MYSQL_USER: db
-      MYSQL_PASSWORD: db
-    volumes:
       - surfcamp-mariadb-data:/var/lib/mysql
+    command: sleep infinity
 
 volumes:
   surfcamp-mariadb-data:

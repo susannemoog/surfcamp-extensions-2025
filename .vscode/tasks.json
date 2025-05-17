@@ -4,21 +4,6 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Database",
-            "type": "shell",
-            // Run only within the devcontainer
-            "command": "[ -d ~/.vscode-server ] && mysql -u db -h db -pdb db || exit 0",
-            "presentation": {
-                "group": "database",
-                "reveal": "never",
-                "panel": "new",
-                "echo": false,
-            },
-            "runOptions": {
-                "runOn": "folderOpen" // This starts both tasks when the container is started
-            }
-        },
-        {
             "label": "Setup",
             "type": "shell",
             "command": "bash .devcontainer/install-vs-code-extensions.sh",
