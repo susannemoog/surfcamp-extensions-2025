@@ -1,21 +1,23 @@
 {
 	"name": "TYPO3 SurfCamp 2025",
-	"dockerComposeFile": "docker-compose.yml",
-	"service": "typo3",
-	"workspaceFolder": "/workspace",
+	"image": "ghcr.io/ochorocho/surfcamp-extensions-2025:latest",
+	"mounts": [
+		"source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    	"source=surfcamp-mariadb-data,target=/var/lib/mysql,type=volume"
+	],
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"ms-azuretools.vscode-docker"
+				"ms-azuretools.vscode-docker",
+				"mtxr.sqltools",
+				"xdebug.php-pack",
+				"EditorConfig.EditorConfig",
+				"mtxr.sqltools-driver-mysql"
 			]
 		}
 	},
-	"features": {
-    	"ghcr.io/skriptfabrik/devcontainer-features/mailpit:1": {}
-	},
 	"remoteUser": "vscode",
-	"initializeCommand": "docker pull ghcr.io/ochorocho/surfcamp-extensions-2025:latest",
-	"postStartCommand": "bash .devcontainer/post-start.sh && ./bin/typo3 extension:setup && apachectl start",
+	"postStartCommand": "bash .devcontainer/post-start.sh",
 	"waitFor": "updateContentCommand",
-	"forwardPorts": [8025]
+	"forwardPorts": [8025,8080,80]
 }

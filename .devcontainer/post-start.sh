@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+sudo service mariadb start
+
 # Database credentials
 USER="db"
 PASSWORD="db"
@@ -27,3 +29,6 @@ composer install
 # Symlink DocumentRoot
 sudo rm -rf /var/www/html
 sudo ln -sfn /workspace/public /var/www/html
+
+./bin/typo3 extension:setup
+apachectl start
