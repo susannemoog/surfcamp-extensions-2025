@@ -30,5 +30,9 @@ composer install
 sudo rm -rf /var/www/html
 sudo ln -sfn /workspace/public /var/www/html
 
+# Add composer bin directory to PATH
+# so all commands are globally available
+echo "export PATH=/workspace/bin:\$PATH" >> ~/.bashrc
+
 ./bin/typo3 extension:setup
 apachectl start

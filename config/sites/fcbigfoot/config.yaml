@@ -1,6 +1,8 @@
-base: '/'
+base: /
 dependencies:
   - typo3-incubator/theme-fcbigfoot
+  - typo3-incubator/memsy/member-management
+  - typo3/felogin
 languages:
   -
     title: English

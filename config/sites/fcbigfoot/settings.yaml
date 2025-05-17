@@ -8,3 +8,29 @@ fcbigfoot:
     channels:
       instagram:
         link: 'https://www.instagram.com/typo3_official/'
+memsy:
+  storage:
+    membershipsFolderPid: 102
+  organization:
+    name: 'FC Bigfoot'
+    personInCharge: 'The Yeti'
+    defaultCountry: DE
+    defaultUsergroup: 2
+    address:
+      streetAndHouseNumber: 'Random Street 3'
+      zip: '72837'
+      country: DE
+      city: 'TYPO3 City'
+    paymentInformation:
+      iban: DE02120300000000202051
+      bic: BYLADEM1001
+      sepaCreditorId: some-creditor-id
+      paymentReason: 'Club Membership'
+    emailOfPersonInCharge: info@example.com
+felogin:
+  pid: '102'
+  showForgotPassword: true
+  emailFrom: info@example.com
+  emailFromName: 'FC Bigfoot'
+  replyToEmail: info@example.com
+  dateFormat: 'd.m.Y H:i'
