@@ -6,6 +6,14 @@
 	"mounts": [
     	"source=surfcamp-mariadb-data,target=/var/lib/mysql,type=volume"
 	],
+	"containerEnv": {
+		"APACHE_RUN_USER": "vscode",
+		"APACHE_RUN_GROUP": "vscode"
+	},
+	"remoteEnv": {
+		"APACHE_RUN_USER": "vscode",
+		"APACHE_RUN_GROUP": "vscode"
+	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
