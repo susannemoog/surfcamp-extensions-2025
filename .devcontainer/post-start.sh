@@ -35,4 +35,4 @@ sudo ln -sfn /workspace/public /var/www/html
 echo "export PATH=/workspace/bin:\$PATH" >> ~/.bashrc
 
 ./bin/typo3 extension:setup
-service apache2 start
+sudo service apache2 start
