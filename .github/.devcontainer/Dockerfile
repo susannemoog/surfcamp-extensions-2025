@@ -1,4 +1,6 @@
 FROM mcr.microsoft.com/devcontainers/php:8.4
+ENV APACHE_RUN_USER=vscode
+ENV APACHE_RUN_GROUP=vscode
 RUN sudo apt update && \
     sudo apt install -y libicu-dev mariadb-client mariadb-server && \
     sudo -E docker-php-ext-install intl mysqli && \
