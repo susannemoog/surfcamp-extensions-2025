@@ -18,10 +18,6 @@
         "packages": {
             "type": "path",
             "url": "packages/*"
-        },
-        "memsy": {
-            "type": "vcs",
-             "url": "https://github.com/TYPO3incubator/ext-memsy.git"
         }
     },
     "config": {

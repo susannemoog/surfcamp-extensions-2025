@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cd209a2e92f3749232ad1c0de89d2725",
+    "content-hash": "f48866f2cdbafd5506be1d0cc2dd1ec1",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -5179,23 +5179,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3incubator/ext-memsy.git",
-                "reference": "41f2e17e74c30491502da6e198b61643932062c5"
+                "reference": "74a11ddcb50be6fc65d415a6e82229f402abaa3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3incubator/ext-memsy/zipball/41f2e17e74c30491502da6e198b61643932062c5",
-                "reference": "41f2e17e74c30491502da6e198b61643932062c5",
+                "url": "https://api.github.com/repos/TYPO3incubator/ext-memsy/zipball/74a11ddcb50be6fc65d415a6e82229f402abaa3c",
+                "reference": "74a11ddcb50be6fc65d415a6e82229f402abaa3c",
                 "shasum": ""
             },
             "require": {
                 "digitick/sepa-xml": "^2.2",
                 "globalcitizen/php-iban": "^4.2",
+                "php": "^8.3",
                 "psr/http-message": "^1.0 || ^2.0",
                 "psr/log": "^3.0",
                 "symfony/console": "^7.0",
                 "symfony/mailer": "^7.0",
                 "symfony/mime": "^7.0",
-                "symfony/polyfill-php83": "^1.31",
                 "typo3/cms-backend": "^13.4",
                 "typo3/cms-core": "^13.4",
                 "typo3/cms-extbase": "^13.4",
@@ -5223,15 +5223,16 @@
                     "TYPO3Incubator\\Memsy\\": "Classes/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
             "description": "Member management extension for TYPO3 CMS",
             "support": {
-                "source": "https://github.com/TYPO3incubator/ext-memsy/tree/main",
-                "issues": "https://github.com/TYPO3incubator/ext-memsy/issues"
+                "issues": "https://github.com/TYPO3incubator/ext-memsy/issues",
+                "source": "https://github.com/TYPO3incubator/ext-memsy/tree/main"
             },
-            "time": "2025-05-14T15:20:23+00:00"
+            "time": "2025-05-19T10:19:55+00:00"
         },
         {
             "name": "typo3-incubator/surfcamp-base",
