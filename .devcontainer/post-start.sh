@@ -28,7 +28,7 @@ composer install
 
 # Symlink DocumentRoot
 sudo rm -rf /var/www/html
-sudo ln -sfn /workspace/public /var/www/html
+sudo ln -sfn /workspaces/surfcamp-2025/public /var/www/html
 
 # Add composer bin directory to PATH
 # so all commands are globally available

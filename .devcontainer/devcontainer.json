@@ -1,19 +1,11 @@
 {
 	"name": "TYPO3 SurfCamp 2025",
 	"image": "ghcr.io/ochorocho/surfcamp-extensions-2025:latest",
-	"workspaceFolder": "/workspace",
-	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+	"workspaceFolder": "/workspaces/surfcamp-2025",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/surfcamp-2025,type=bind,consistency=cached",
 	"mounts": [
     	"source=surfcamp-mariadb-data,target=/var/lib/mysql,type=volume"
 	],
-	"containerEnv": {
-		"APACHE_RUN_USER": "vscode",
-		"APACHE_RUN_GROUP": "vscode"
-	},
-	"remoteEnv": {
-		"APACHE_RUN_USER": "vscode",
-		"APACHE_RUN_GROUP": "vscode"
-	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
