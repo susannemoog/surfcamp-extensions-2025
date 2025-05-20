@@ -45,4 +45,4 @@ Wating for a dedicated repository
 * Use ` .devcontainer/db-export.sh` to export the current database.
   The exported SQL file will be used to import initial data.
 * The Apache2 webserver listens on port `3333` due to issues
-  with port AutoForwarding in codepsaces when a port is mapped e.g. `3333:80`.
+  with port AutoForwarding in codepsaces when a port is mapped e.g. `3333:80` (`appPort`).
