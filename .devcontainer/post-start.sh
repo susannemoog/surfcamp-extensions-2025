@@ -35,7 +35,7 @@ sudo ln -sfn /workspaces/surfcamp-2025/public /var/www/html
 echo "export PATH=/workspace/bin:\$PATH" >> ~/.bashrc
 
 if [[ -n "$CODESPACE_NAME" ]]; then
-  baseDomain="export TYPO3_BASE_DOMAIN=https://$CODESPACE_NAME.app.github.dev"
+  baseDomain="export TYPO3_BASE_DOMAIN=https://$CODESPACE_NAME-80.app.github.dev"
   echo "$baseDomain" >> ~/.bashrc
   echo "$baseDomain" | sudo tee -a /etc/apache2/envvars
 else
