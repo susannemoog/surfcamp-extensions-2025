@@ -21,5 +21,12 @@
 	"remoteUser": "vscode",
 	"postStartCommand": "bash .devcontainer/post-start.sh",
 	"waitFor": "updateContentCommand",
-	"forwardPorts": [8025,80]
+	"forwardPorts": [8025,80],
+	"portsAttributes": {
+		"80": {
+			"label": "Apache2 Webserver",
+			"onAutoForward": "notify",
+			"visibility": "public"
+		}
+	}
 }

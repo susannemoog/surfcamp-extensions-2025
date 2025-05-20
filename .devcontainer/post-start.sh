@@ -45,5 +45,4 @@ else
 fi
 
 ./bin/typo3 extension:setup
-echo http://localhost:80
 sudo service apache2 start
