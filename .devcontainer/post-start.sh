@@ -46,4 +46,10 @@ else
 fi
 
 ./bin/typo3 extension:setup
+
+# Add scheduler cron
+echo "* * * * * root /usr/local/bin/php /workspaces/surfcamp-2025/bin/typo3 scheduler:run > /proc/1/fd/1 2>/proc/1/fd/2" | sudo tee /etc/cron.d/typo3-scheduler
+sudo chmod 0644 /etc/cron.d/typo3-scheduler
+
+sudo service cron start
 sudo service apache2 start
