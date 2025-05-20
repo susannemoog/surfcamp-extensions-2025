@@ -34,16 +34,6 @@ return [
             'loginLogo' => '',
             'loginLogoAlt' => '',
         ],
-        'bootstrap_package' => [
-            'disableCssProcessing' => '0',
-            'disableGoogleFontCaching' => '0',
-            'disablePageTsBackendLayouts' => '0',
-            'disablePageTsContentElements' => '0',
-            'disablePageTsRTE' => '0',
-            'disablePageTsTCADefaults' => '0',
-            'disablePageTsTCEFORM' => '0',
-            'disablePageTsTCEMAIN' => '0',
-        ],
         'extensionmanager' => [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
@@ -74,7 +64,7 @@ return [
         'cacheHash' => [
             'enforceValidation' => true,
         ],
-        'debug' => false,
+        'debug' => true,
         'disableNoCacheParameter' => true,
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',

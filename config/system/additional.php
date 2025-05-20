@@ -2,7 +2,7 @@
 
 $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'], [
     'BE' => [
-        'debug' => 0,
+        'debug' => true,
         'installToolPassword' => '$argon2id$v=19$m=65536,t=16,p=1$VktrT0J2cXU3SHNtY0c4SA$36zwyPIHD9iUteTlw04ft6NYYmhVA9FtzkR5py/5B0w',
         'entryPoint' => 'typo3/',
     ],
