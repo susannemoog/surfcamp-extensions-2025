@@ -6,7 +6,7 @@
 	"mounts": [
     	"source=surfcamp-mariadb-data,target=/var/lib/mysql,type=volume"
 	],
-	"appPort": 80,
+	"appPort": "3333:80",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -23,7 +23,7 @@
 	"waitFor": "updateContentCommand",
 	"forwardPorts": [8025],
 	"portsAttributes": {
-		"80": {
+		"3333": {
 			"label": "Apache2 Webserver",
 			"onAutoForward": "notify",
 			"visibility": "public"
