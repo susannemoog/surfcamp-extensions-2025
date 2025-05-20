@@ -45,7 +45,5 @@ else
   echo "$baseDomain" | sudo tee -a /etc/apache2/envvars
 fi
 
-cat .devcontainer/ports.conf | sudo tee /etc/apache2/ports.conf
-
 ./bin/typo3 extension:setup
 sudo service apache2 start

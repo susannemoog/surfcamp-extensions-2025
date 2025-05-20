@@ -1,4 +1,5 @@
 FROM mcr.microsoft.com/devcontainers/php:8.4
+COPY ports.conf /etc/apache2/ports.conf
 RUN sudo apt update && \
     sudo apt install -y libicu-dev mariadb-client mariadb-server && \
     sudo -E docker-php-ext-install intl mysqli && \

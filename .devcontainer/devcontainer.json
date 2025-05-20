@@ -24,7 +24,7 @@
 	"forwardPorts": [8025],
 	"portsAttributes": {
 		"3333": {
-			"label": "Apache2 Webserver",
+			"label": "Apache2",
 			"onAutoForward": "notify",
 			"visibility": "public"
 		},
