@@ -39,7 +39,7 @@ if [[ -n "$CODESPACE_NAME" ]]; then
   echo "$baseDomain" >> ~/.bashrc
   echo "$baseDomain" | sudo tee -a /etc/apache2/envvars
 else
-  baseDomain="export TYPO3_BASE_DOMAIN=http://127.0.0.1:3333"
+  baseDomain="export TYPO3_BASE_DOMAIN=http://127.0.0.1:80"
   echo "$baseDomain" >> ~/.bashrc
   echo "$baseDomain" | sudo tee -a /etc/apache2/envvars
 fi
