@@ -1,0 +1,61 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          typo3-consumer
+# Required-Start:    $remote_fs $syslog mariadb
+# Required-Stop:     $remote_fs $syslog mariadb
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Run the TYPO3 message consumer
+### END INIT INFO
+
+DAEMON="/usr/local/bin/php"
+SCRIPT="/workspaces/surfcamp-2025/bin/typo3"
+ARGS="messenger:consume doctrine --exit-code-on-limit 133"
+USER="www-data"
+PIDFILE="/var/run/typo3-consumer.pid"
+LOGFILE="/workspaces/surfcamp-2025/var/log/typo3-consumer.log"
+
+start() {
+    echo "Starting TYPO3 consumer..."
+    if [ -f "$PIDFILE" ] && kill -0 $(cat "$PIDFILE") 2>/dev/null; then
+        echo "TYPO3 consumer already running."
+        return 1
+    fi
+    su -s /bin/sh -c "$DAEMON $SCRIPT $ARGS >> $LOGFILE 2>&1 & echo \$!" $USER > "$PIDFILE"
+    echo "Started with PID $(cat $PIDFILE)"
+}
+
+stop() {
+    echo "Stopping TYPO3 consumer..."
+    if [ -f "$PIDFILE" ]; then
+        kill $(cat "$PIDFILE") 2>/dev/null
+        rm -f "$PIDFILE"
+        echo "Stopped."
+    else
+        echo "No PID file found."
+    fi
+}
+
+status() {
+    if [ -f "$PIDFILE" ] && kill -0 $(cat "$PIDFILE") 2>/dev/null; then
+        echo "TYPO3 consumer is running with PID $(cat $PIDFILE)"
+    else
+        echo "TYPO3 consumer is not running"
+    fi
+}
+
+restart() {
+    stop
+    sleep 1
+    start
+}
+
+case "$1" in
+    start) start ;;
+    stop) stop ;;
+    status) status ;;
+    restart) restart ;;
+    *) echo "Usage: $0 {start|stop|status|restart}" ;;
+esac
+
+exit 0

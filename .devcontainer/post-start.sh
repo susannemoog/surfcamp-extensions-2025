@@ -52,4 +52,5 @@ echo "* * * * * root /usr/local/bin/php /workspaces/surfcamp-2025/bin/typo3 sche
 sudo chmod 0644 /etc/cron.d/typo3-scheduler
 
 sudo service cron start
+sudo service typo3-message-consumer start
 sudo service apache2 start
