@@ -34,6 +34,7 @@ sudo ln -sfn /workspaces/surfcamp-2025/public /var/www/html
 # so all commands are globally available
 echo "export PATH=/workspace/bin:\$PATH" >> ~/.bashrc
 
+# Dynamically set TYPO3_BASE_DOMAIN depending on the environment (local or codespaces)
 if [[ -n "$CODESPACE_NAME" ]]; then
   baseDomain="export TYPO3_BASE_DOMAIN=https://$CODESPACE_NAME-3333.app.github.dev"
   echo "$baseDomain" >> ~/.bashrc
@@ -43,6 +44,8 @@ else
   echo "$baseDomain" >> ~/.bashrc
   echo "$baseDomain" | sudo tee -a /etc/apache2/envvars
 fi
+
+cat .devcontainer/ports.conf | sudo tee /etc/apache2/ports.conf
 
 ./bin/typo3 extension:setup
 sudo service apache2 start

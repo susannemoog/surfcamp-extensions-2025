@@ -6,7 +6,6 @@
 	"mounts": [
     	"source=surfcamp-mariadb-data,target=/var/lib/mysql,type=volume"
 	],
-	"appPort": "3333:80",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -20,11 +19,17 @@
 	},
 	"remoteUser": "vscode",
 	"postStartCommand": "bash .devcontainer/post-start.sh",
-	"waitFor": "updateContentCommand",
+	// We need a fixed port to be able to define a base url in the site config
+	"appPort": 3333,
 	"forwardPorts": [8025],
 	"portsAttributes": {
 		"3333": {
 			"label": "Apache2 Webserver",
+			"onAutoForward": "notify",
+			"visibility": "public"
+		},
+		"8025": {
+			"label": "MailPit",
 			"onAutoForward": "notify",
 			"visibility": "public"
 		}
