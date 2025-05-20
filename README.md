@@ -33,3 +33,10 @@ Wating for a dedicated repository
 
 * having Docker installed locally (see https://docs.docker.com/get-docker/)
 * VS Code with the devcontainer extension enabled (see https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+
+# ToDo
+
+* Enable Development mode
+* Scheduler
+* Run MessageBus consumer
+* Write docs

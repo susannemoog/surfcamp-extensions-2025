@@ -11,6 +11,7 @@ fcbigfoot:
 memsy:
   storage:
     membershipsFolderPid: 102
+    paymentsFolderPid: 103
   organization:
     name: 'FC Bigfoot'
     personInCharge: 'The Yeti'

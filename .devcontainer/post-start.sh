@@ -34,5 +34,15 @@ sudo ln -sfn /workspaces/surfcamp-2025/public /var/www/html
 # so all commands are globally available
 echo "export PATH=/workspace/bin:\$PATH" >> ~/.bashrc
 
+if [[ -n "$CODESPACE_NAME" ]]; then
+  baseDomain="export TYPO3_BASE_DOMAIN=https://$CODESPACE_NAME.app.github.dev"
+  echo "$baseDomain" >> ~/.bashrc
+  echo "$baseDomain" | sudo tee -a /etc/apache2/envvars
+else
+  baseDomain="export TYPO3_BASE_DOMAIN=http://127.0.0.1:3333"
+  echo "$baseDomain" >> ~/.bashrc
+  echo "$baseDomain" | sudo tee -a /etc/apache2/envvars
+fi
+
 ./bin/typo3 extension:setup
 sudo service apache2 start
