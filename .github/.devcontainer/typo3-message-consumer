@@ -11,7 +11,7 @@
 DAEMON="/usr/local/bin/php"
 SCRIPT="/workspaces/surfcamp-2025/bin/typo3"
 ARGS="messenger:consume doctrine --exit-code-on-limit 133"
-USER="www-data"
+USER="vscode"
 PIDFILE="/var/run/typo3-consumer.pid"
 LOGFILE="/workspaces/surfcamp-2025/var/log/typo3-consumer.log"
 

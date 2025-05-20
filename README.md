@@ -36,8 +36,6 @@ Wating for a dedicated repository
 
 # ToDo
 
-* Scheduler
-* Run MessageBus consumer
 * Write docs
 
 # Development notes
@@ -46,3 +44,5 @@ Wating for a dedicated repository
   The exported SQL file will be used to import initial data.
 * The Apache2 webserver listens on port `3333` due to issues
   with port AutoForwarding in codepsaces when a port is mapped e.g. `3333:80` (`appPort`).
+* The scheduler CronJob will run every minute
+* Use `service typo3-message-consumer <start|stop|status>` to manage the message queue service
